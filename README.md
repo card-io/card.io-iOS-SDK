@@ -22,6 +22,10 @@ Instructions
 
 The card.io iOS SDK includes header files and a single static library. We'll walk you through integration and usage.
 
+### Sign up for card.io
+
+*   To use the card.io SDK, you'll need to [sign up](https://www.card.io/accounts/register/developer) and [get an app token](https://www.card.io/apps/). 
+
 ### Requirements
 
 *   Supports target deployment of iOS version 5.0+.
