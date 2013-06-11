@@ -34,7 +34,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 3. In your project's Build Settings, add `-lc++` to `Other Linker Flags`.
 4. Add these frameworks to your project.
 [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
-for iOS versions back to 4.0 is supported.
+for iOS versions back to 5.0 is supported.
     * AVFoundation
     * AudioToolbox
     * CoreMedia
