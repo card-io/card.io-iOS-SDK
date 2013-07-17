@@ -12,7 +12,7 @@ All releases follow [semantic versioning](http://semver.org/).
 You can receive updates about new versions via a few different channels:
 
 * Follow [@cardio](https://twitter.com/cardio) (also great to send us feedback)
-* Subscribe to our [card-io-sdk-announce](https://groups.google.com/groups/card-io-sdk-announce) list.
+* Subscribe to our [card-io-sdk-announce](https://groups.google.com/forum/#!forum/card-io-sdk-announce) list.
 * "Watch" this GitHub repository
 
 Also be sure to check and post to the [Stack Overflow card.io tag](http://stackoverflow.com/questions/tagged/card.io).
