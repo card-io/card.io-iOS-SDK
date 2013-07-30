@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+3.2.1 (Mon 7/29/2013)
+
+* Fix a rotation issue for apps which constrain their Supported Interface Orientations.
+* Add ko, pt_BR, and es_MX to our supported localizations.
+
+--
+
 3.2.0 (Thu 5/30/2013)
 
 * Update the required C++ Standard Library from libstdc++ to libc++
