@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+3.2.2 (Thu 8/8/2013)
+
+* Change all uses of ZIP to postalCode
+* Fix a bug with translucent navigation bar (github issue #8)
+* Fix a bug with MKMapKit (github issue #10)
+* Add card.io version number to all header files (github issue #1)
+
 3.2.1 (Mon 7/29/2013)
 
 * Fix a rotation issue for apps which constrain their Supported Interface Orientations.
