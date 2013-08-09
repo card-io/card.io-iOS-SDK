@@ -1,5 +1,7 @@
 //
 //  CardIOPaymentViewController.h
+//  Version 3.2.2
+//
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
 
@@ -56,8 +58,9 @@
 // Set to NO if you don't need to collect the CVV from the user. Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL collectCVV;
 
-// Set to YES if you need to collect the billing zip code. Defaults to NO.
-@property(nonatomic, assign, readwrite) BOOL collectZip;
+// Set to YES if you need to collect the billing postal code. Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL collectPostalCode;
+@property(nonatomic, assign, readwrite, getter=collectPostalCode, setter=setCollectPostalCode:) BOOL collectZip __attribute__((deprecated("use collectPostalCode instead")));
 
 // Set to NO if you want to suppress the first-time how-to alert view. Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert;

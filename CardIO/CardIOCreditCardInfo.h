@@ -1,12 +1,14 @@
 //
 //  CardIOCreditCardInfo.h
+//  Version 3.2.2
+//
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 typedef enum {
-  CardIOCreditCardTypeUnknown = 0,  // deprecated; use CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous
+  CardIOCreditCardTypeUnknown __attribute__((deprecated("use CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous instead"))) = 0,
   CardIOCreditCardTypeUnrecognized = 0,  // the card number does not correspond to any recognizable card type
   CardIOCreditCardTypeAmbiguous = 1,  // the card number corresponds to multiple card types (e.g. when only a few digits have been entered)
   CardIOCreditCardTypeAmex = '3',
@@ -26,9 +28,10 @@ typedef enum {
 @property(nonatomic, assign, readwrite) NSUInteger expiryMonth; // January == 1
 @property(nonatomic, assign, readwrite) NSUInteger expiryYear; // the full four digit year
 
-// cvv and/or zip may be nil, if not requested
+// cvv and/or postal code may be nil, if not requested
 @property(nonatomic, copy, readwrite) NSString *cvv;
-@property(nonatomic, copy, readwrite) NSString *zip;
+@property(nonatomic, copy, readwrite) NSString *postalCode;
+@property(nonatomic, copy, readwrite, getter=postalCode, setter=setPostalCode:) NSString *zip __attribute__((deprecated("use postalCode instead")));
 
 // was the card number scanned (as opposed to manually entered)?
 @property(nonatomic, assign, readwrite) BOOL scanned;
