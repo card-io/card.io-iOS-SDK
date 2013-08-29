@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 3.2.2
+//  Version 3.2.3
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
@@ -37,11 +37,11 @@
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 // If YES, the status bar's style will be kept as whatever your app has set it to.
-// If NO, the status bar style will be set to UIStatusBarStyleBlackOpaque.
+// If NO, the status bar style will be set to UIStatusBarStyleBlackOpaque (pre-iOS 7), or UIStatusBarStyleDefault (iOS 7).
 // Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL keepStatusBarStyle;
 
-// The default appearance of the navigation bar is UIBarStyleDefault, tintColor == nil.
+// The default appearance of the navigation bar is UIBarStyleDefault; tintColor == nil (pre-iOS 7), barTintColor == nil (iOS 7).
 // Set either or both of these properties if you want to override these defaults.
 @property(nonatomic, assign, readwrite) UIBarStyle navigationBarStyle;
 @property(nonatomic, retain, readwrite) UIColor *navigationBarTintColor;
@@ -51,6 +51,13 @@
 // If your app already does its own blurring upon backgrounding, you might choose to disable this.
 // Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL disableBlurWhenBackgrounding;
+
+// Alter the card guide (bracket) color. Opaque colors recommended.
+// Defaults to nil; if nil, will use card.io green.
+@property(nonatomic, retain, readwrite) UIColor *guideColor;
+
+// If YES, don't have the user confirm the scanned card, just return the results immediately. Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL suppressScanConfirmation;
 
 // Set to NO if you don't need to collect the card expiration. Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
@@ -62,18 +69,14 @@
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
 @property(nonatomic, assign, readwrite, getter=collectPostalCode, setter=setCollectPostalCode:) BOOL collectZip __attribute__((deprecated("use collectPostalCode instead")));
 
-// Set to NO if you want to suppress the first-time how-to alert view. Defaults to YES.
-@property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert;
-
 // Set to YES to show the card.io logo over the camera instead of the PayPal logo. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL useCardIOLogo;
 
-// Set to YES to prevent card.io from showing manual entry buttons internally. Defaults to NO.
-// If you want to prevent users from *ever* seeing card.io's manual entry screen, you should also:
-//   * Check +canReadCardWithCamera before initing the view controller. If +canReadCardWithCamera
-//     returns false, card.io will display a manual entry screen if presented.
-//   * If needed for UI updates such as disabling/removing card scan buttons, subscribe to scan
-//     notifications; see +(start|stop)GeneratingScanAvailabilityNotifications.
+// Set to YES to prevent card.io from showing its "Enter Manually" button. Defaults to NO.
+// Note: If +canReadCardWithCamera returns false, then if card.io is presented it will
+// display a manual entry screen.
+// Therefore, if you want to prevent users from *ever* seeing card.io's manual entry screen,
+// you should also check +canReadCardWithCamera before initing the view controller.
 @property(nonatomic, assign, readwrite) BOOL disableManualEntryButtons;
 
 // Access to the delegate.
@@ -81,9 +84,12 @@
 
 // Indicates whether this device supports camera-based card scanning, including
 // factors like hardware support and OS version. card.io automatically provides
-// manual entry of cards as a fallback, so it is not necessary to check this.
+// manual entry of cards as a fallback, so it is not typically necessary for your
+// app to check this.
 + (BOOL)canReadCardWithCamera;
 
 // Please send the output of this method with any technical support requests.
 + (NSString *)libraryVersion;
+
+@property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert __attribute__((deprecated("the former first-time alert is no more")));
 @end
