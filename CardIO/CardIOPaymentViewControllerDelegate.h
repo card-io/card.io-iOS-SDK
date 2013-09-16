@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewControllerDelegate.h
-//  Version 3.2.3
+//  Version 3.2.4
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
@@ -10,19 +10,21 @@
 @class CardIOPaymentViewController;
 @class CardIOCreditCardInfo;
 
+/// The receiver will be notified when the CardIOPaymentViewController flow completes, due to either success or user-cancellation.
+///
+/// Exactly one of these delegate methods will be called.
+///
+/// Each of them MUST dismiss the CardIOPaymentViewController.
 @protocol CardIOPaymentViewControllerDelegate<NSObject>
 
 @required
 
-//
-// Precisely one of userDidCancelPaymentViewController: or userDidProvideCreditCardInfo:inPaymentViewController: will be called.
-// In either case, it is your responsibility to dismiss the CardIOPaymentViewController.
-//
-
-// This method will be called if the user cancels the scan. You must dismiss paymentViewController.
+/// This method will be called if the user cancels the scan. You MUST dismiss paymentViewController.
+/// @param paymentViewController The active CardIOPaymentViewController.
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)paymentViewController;
 
-// This method will be called when there is a successful scan (or manual entry). You must dismiss paymentViewController.
+/// This method will be called when there is a successful scan (or manual entry). You MUST dismiss paymentViewController.
+/// @param paymentViewController The active CardIOPaymentViewController.
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)paymentViewController;
 
 @end

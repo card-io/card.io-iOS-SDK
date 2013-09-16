@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+3.2.4 (Mon 9/16/2013)
+
+* Build with Xcode 5 GM seed.
+* Modify header comments to support Xcode 5 Quick Help.
+* Fix a few small bugs.
+
+--
+
 3.2.3 (Thu 8/29/2013)
 
 * Ready for iOS 7 (please let us know if you discover any issues!)

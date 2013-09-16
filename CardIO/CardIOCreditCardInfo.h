@@ -1,51 +1,81 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 3.2.3
+//  Version 3.2.4
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-  CardIOCreditCardTypeUnknown __attribute__((deprecated("use CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous instead"))) = 0,
-  CardIOCreditCardTypeUnrecognized = 0,  // the card number does not correspond to any recognizable card type
-  CardIOCreditCardTypeAmbiguous = 1,  // the card number corresponds to multiple card types (e.g. when only a few digits have been entered)
+/// CardIOCreditCardType Identifies type of card.
+typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
+  /// Deprecated.
+  /// @see CardIOCreditCardTypeUnrecognized, CardIOCreditCardTypeAmbiguous
+  CardIOCreditCardTypeUnknown __attribute__((deprecated("Use CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous instead."))) = 0,
+  /// The card number does not correspond to any recognizable card type.
+  CardIOCreditCardTypeUnrecognized = 0,
+  /// The card number corresponds to multiple card types (e.g., when only a few digits have been entered).
+  CardIOCreditCardTypeAmbiguous = 1,
+  /// American Express
   CardIOCreditCardTypeAmex = '3',
+  /// Japan Credit Bureau
   CardIOCreditCardTypeJCB = 'J',
+  /// VISA
   CardIOCreditCardTypeVisa = '4',
+  /// MasterCard
   CardIOCreditCardTypeMastercard = '5',
+  /// Discover Card
   CardIOCreditCardTypeDiscover = '6'
-} CardIOCreditCardType;
+};
 
 
+/// Container for the information about a card.
 @interface CardIOCreditCardInfo : NSObject<NSCopying>
 
+/// Card number.
 @property(nonatomic, copy, readwrite) NSString *cardNumber;
-@property(nonatomic, copy, readonly) NSString *redactedCardNumber; // card number with all but the last four digits obfuscated
 
-// expiryMonth & expiryYear may be 0, if expiry information is not requested
-@property(nonatomic, assign, readwrite) NSUInteger expiryMonth; // January == 1
-@property(nonatomic, assign, readwrite) NSUInteger expiryYear; // the full four digit year
+/// Card number with all but the last four digits obfuscated.
+@property(nonatomic, copy, readonly) NSString *redactedCardNumber;
 
-// cvv and/or postal code may be nil, if not requested
+/// January == 1
+/// @note expiryMonth & expiryYear may be 0, if expiry information was not requested.
+@property(nonatomic, assign, readwrite) NSUInteger expiryMonth;
+
+/// The full four digit year.
+/// @note expiryMonth & expiryYear may be 0, if expiry information was not requested.
+@property(nonatomic, assign, readwrite) NSUInteger expiryYear;
+
+/// Security code (aka CSC, CVV, CVV2, etc.)
+/// @note May be nil, if security code was not requested.
 @property(nonatomic, copy, readwrite) NSString *cvv;
-@property(nonatomic, copy, readwrite) NSString *postalCode;
-@property(nonatomic, copy, readwrite, getter=postalCode, setter=setPostalCode:) NSString *zip __attribute__((deprecated("use postalCode instead")));
 
-// was the card number scanned (as opposed to manually entered)?
+/// Postal code. Format is country dependent.
+/// @note May be nil, if postal code information was not requested.
+@property(nonatomic, copy, readwrite) NSString *postalCode;
+
+/// Deprecated.
+/// @see postalCode
+@property(nonatomic, copy, readwrite, getter=postalCode, setter=setPostalCode:) NSString *zip __attribute__((deprecated("Use postalCode instead.")));
+
+/// Was the card number scanned (as opposed to entered manually)?
 @property(nonatomic, assign, readwrite) BOOL scanned;
 
-// Derived from cardNumber.
-// When provided by card.io, cardType will not be CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous.
+/// Derived from cardNumber.
+/// @note CardIOCreditInfo objects returned by userDidProvideCreditCardInfo:inPaymentViewController:
+///       will never return a cardType of CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous.
 @property(nonatomic, assign, readonly) CardIOCreditCardType cardType;
 
-// Convenience method to return a card type string (e.g. "Visa", "American Express", "JCB", "MasterCard", or "Discover") suitable for display.
-// Where appropriate, this string will be translated into the language specified.
-// (See CardIOPaymentViewController.h for a detailed explanation of languageOrLocale.)
+/// Convenience method which returns a card type string suitable for display (e.g. "Visa", "American Express", "JCB", "MasterCard", or "Discover").
+/// Where appropriate, this string will be translated into the language specified.
+/// @param cardType The card type.
+/// @param languageOrLocale See CardIOPaymentViewController.h for a detailed explanation of languageOrLocale.
+/// @return Card type string suitable for display.
 + (NSString *)displayStringForCardType:(CardIOCreditCardType)cardType usingLanguageOrLocale:(NSString *)languageOrLocale;
 
-// Returns a 36x25 credit card logo, at a resolution appropriate for the device
+/// Returns a 36x25 credit card logo, at a resolution appropriate for the device.
+/// @param cardType The card type.
+/// @return 36x25 credit card logo.
 + (UIImage *)logoForCardType:(CardIOCreditCardType)cardType;
 
 @end

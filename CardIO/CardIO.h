@@ -1,6 +1,6 @@
 //
 //  CardIO.h
-//  Version 3.2.3
+//  Version 3.2.4
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
