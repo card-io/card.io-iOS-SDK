@@ -1,6 +1,6 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 3.2.4
+//  Version 3.3.0
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
@@ -60,6 +60,7 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 
 /// Was the card number scanned (as opposed to entered manually)?
 @property(nonatomic, assign, readwrite) BOOL scanned;
+
 
 /// Derived from cardNumber.
 /// @note CardIOCreditInfo objects returned by userDidProvideCreditCardInfo:inPaymentViewController:

@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewControllerDelegate.h
-//  Version 3.2.4
+//  Version 3.3.0
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
@@ -24,7 +24,8 @@
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)paymentViewController;
 
 /// This method will be called when there is a successful scan (or manual entry). You MUST dismiss paymentViewController.
+/// @param cardInfo The results of the scan.
 /// @param paymentViewController The active CardIOPaymentViewController.
-- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)paymentViewController;
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)cardInfo inPaymentViewController:(CardIOPaymentViewController *)paymentViewController;
 
 @end

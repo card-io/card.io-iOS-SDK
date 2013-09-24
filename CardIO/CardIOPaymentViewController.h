@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 3.2.4
+//  Version 3.3.0
 //
 //  Copyright (c) 2011-2013 PayPal. All rights reserved.
 //
@@ -8,7 +8,8 @@
 #import <UIKit/UIKit.h>
 #import "CardIOPaymentViewControllerDelegate.h"
 
-/// CardIOPaymentViewController is the main entry point into the card.io SDK.
+/// CardIOPaymentViewController is one of two main entry points into the card.io SDK.
+/// @see CardIOView
 @interface CardIOPaymentViewController : UINavigationController
 
 /// Initializer for scanning.

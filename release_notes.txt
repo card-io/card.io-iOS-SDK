@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+3.3.0 (Tue 9/24/2013)
+
+* Introduce CardIOView for highly customizable, scan-only integration.
+* Fix a few small bugs.
+
+--
+
 3.2.4 (Mon 9/16/2013)
 
 * Build with Xcode 5 GM seed.
