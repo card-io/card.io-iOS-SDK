@@ -54,6 +54,13 @@ for iOS versions back to 5.0 is supported.
 6.  Refer to the header files for more usage options and information.
 
 
+### Sample app
+
+For a quick first look at card.io, we have included a very small sample application that you can build and run.
+
+Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
+
+
 ### Sample code
 
 You can use card.io in two ways:
