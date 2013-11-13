@@ -17,6 +17,14 @@ To receive updates about new versions:
 
 You can find and start technical discussions using the [Stack Overflow card.io tag](http://stackoverflow.com/questions/tagged/card.io).
 
+Sample app
+----------
+
+For a quick first look at card.io, we have included a very small sample application that you can build and run.
+
+Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
+
+
 Instructions
 ------------
 
@@ -32,7 +40,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Setup
 
-1. Get the latest SDK by cloning this repo or downloading an archive of the most recent tag.
+1. Get the latest SDK by cloning this repo or downloading an archive of [the most recent tag](https://github.com/card-io/card.io-iOS-SDK/tags).
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
 3. In your project's Build Settings, add `-lc++` to `Other Linker Flags`.
 4. Add these frameworks to your project.
@@ -52,14 +60,6 @@ for iOS versions back to 5.0 is supported.
 5.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
 [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 6.  Refer to the header files for more usage options and information.
-
-
-### Sample app
-
-For a quick first look at card.io, we have included a very small sample application that you can build and run.
-
-Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
-
 
 ### Sample code
 
