@@ -28,7 +28,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Requirements
 
-*   Supports target deployment of iOS version 5.0+ and instruction set armv7+.
+*   Supports target deployment of iOS version 5.1+ and instruction set armv7+ (including 64-bit).
 
 ### Setup
 

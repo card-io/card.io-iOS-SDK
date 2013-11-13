@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.4.0 (Tue 11/12/2013)
+
+* Now 64-bit compatible.
+
+--
+
 3.3.0 (Tue 9/24/2013)
 
 * Introduce CardIOView for highly customizable, scan-only integration.
