@@ -42,7 +42,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 1. Get the latest SDK by cloning this repo or downloading an archive of [the most recent tag](https://github.com/card-io/card.io-iOS-SDK/tags).
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
-3. In your project's Build Settings, add `-lc++` to `Other Linker Flags`.
+3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
 4. Add these frameworks to your project.
 [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
 for iOS versions back to 5.0 is supported.
