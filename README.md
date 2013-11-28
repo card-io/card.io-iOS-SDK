@@ -43,23 +43,30 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 1. Get the latest SDK by cloning this repo or downloading an archive of [the most recent tag](https://github.com/card-io/card.io-iOS-SDK/tags).
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
-4. Add these frameworks to your project.
+4. *Either:*
+  * Add these frameworks to your project.
 [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
 for iOS versions back to 5.0 is supported.
-    * AudioToolbox
-    * AVFoundation
-    * CoreGraphics
-    * CoreMedia
-    * CoreVideo
-    * Foundation
-    * MobileCoreServices
-    * OpenGLES
-    * QuartzCore
-    * Security
-    * UIKit
-5.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
+     * AudioToolbox
+     * AVFoundation
+     * CoreGraphics
+     * CoreMedia
+     * CoreVideo
+     * Foundation
+     * MobileCoreServices
+     * OpenGLES
+     * QuartzCore
+     * Security
+     * UIKit
+5. *or,* if you are using Xcode 5 or newer:
+  * Add only this single framework to your project:
+    * AVFoundation (as an `Optional` [i.e., weak-linked] library)
+  * and confirm that these two Build Settings are both enabled:
+    * `Enable Modules (C and Objective-C)`
+    * `Link Frameworks Automatically`
+6.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
 [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
-6.  Refer to the header files for more usage options and information.
+7.  Refer to the header files for more usage options and information.
 
 ### Sample code
 
