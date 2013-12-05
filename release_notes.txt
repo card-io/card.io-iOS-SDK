@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+3.4.1 (Thu 12/05/13)
+
+* Respect the setting for UIViewControllerBasedStatusBarAppearance in your app's Info.plist
+* Enable copy/paste for the manual-entry fields.
+* Improve the handling of right-to-left languages (e.g., Hebrew).
+
+--
+
 3.4.0 (Tue 11/12/2013)
 
 * Now 64-bit compatible.
