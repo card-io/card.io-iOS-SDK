@@ -22,7 +22,8 @@ Sample app
 
 For a quick first look at card.io, we have included a very small sample application that you can build and run.
 
-Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
+1. **Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
+2. Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
 
 
 Instructions
@@ -40,7 +41,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Setup
 
-1. Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).
+1. **Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
 4. *Either:*
