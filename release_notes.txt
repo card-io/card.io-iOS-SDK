@@ -1,7 +1,15 @@
 card.io iOS SDK release notes
 =============================
 
-3.4.1 (Thu 12/05/13)
+3.4.2 (Wed 12/11/2013)
+
+* Enable linking against iOS 6 SDK, for apps not yet targeted at iOS 7.
+* Add Arabic (ar) and Malay (ms) to our supported localizations.
+* Fix a memory leak when a user rapidly and repeatedly starts camera sessions.
+
+--
+
+3.4.1 (Thu 12/05/2013)
 
 * Respect the setting for UIViewControllerBasedStatusBarAppearance in your app's Info.plist
 * Enable copy/paste for the manual-entry fields.
