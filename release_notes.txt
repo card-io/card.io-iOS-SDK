@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.4.3 (Thu 12/12/2013)
+
+* Restore use of CardIOView, which was accidentally broken in release 3.4.1.
+
+--
+
 3.4.2 (Wed 12/11/2013)
 
 * Enable linking against iOS 6 SDK, for apps not yet targeted at iOS 7.
