@@ -176,9 +176,9 @@ Write the delegate method to receive the results:
 ```obj-c
 // SomeViewController.m
 
-- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)cardInfo {
-    if (cardInfo) {
-    // The full card number is available as cardInfo.cardNumber, but don't log that!
+- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)info {
+    if (info) {
+    // The full card number is available as info.cardNumber, but don't log that!
     NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
     // Use the card info...
   }
@@ -247,9 +247,9 @@ Write the delegate method to receive the results:
 ```obj-c
 // SomeViewController.m
 
-- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)cardInfo {
-    if (cardInfo) {
-    // The full card number is available as cardInfo.cardNumber, but don't log that!
+- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)info {
+    if (info) {
+    // The full card number is available as info.cardNumber, but don't log that!
     NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
     // Use the card info...
   }
