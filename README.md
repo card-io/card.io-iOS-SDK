@@ -37,7 +37,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Requirements
 
-*   Supports target deployment of iOS version 5.1+ and instruction set armv7+ (including 64-bit).
+*   Supports target deployment of iOS version 6.1+ and instruction set armv7+ (including 64-bit).
 
 ### Setup
 
@@ -46,8 +46,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
 4. *Either:*
   * Add these frameworks to your project.
-[Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
-for iOS versions back to 5.0 is supported.
+[Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html) is supported.
      * AudioToolbox
      * AVFoundation
      * CoreGraphics
