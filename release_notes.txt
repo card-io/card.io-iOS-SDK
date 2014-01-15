@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+3.4.4 (Tue 1/14/2014)
+
+* Fix two very rare bugs:
+  - Card-scan succeeds, but then reports a nil card number;
+  - Card-scan completes while the camera focus is being adjusted -> crash.
+
+--
+
 3.4.3 (Thu 12/12/2013)
 
 * Restore use of CardIOView, which was accidentally broken in release 3.4.1.
