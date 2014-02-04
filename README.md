@@ -6,6 +6,8 @@ card.io SDK for iOS
 Stay up to date
 ---------------
 
+**Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
+
 Please keep your app up to date with the latest version of the SDK.
 All releases follow [semantic versioning](http://semver.org/).
 
