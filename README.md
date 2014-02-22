@@ -6,8 +6,6 @@ card.io SDK for iOS
 Stay up to date
 ---------------
 
-**Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
-
 Please keep your app up to date with the latest version of the SDK.
 All releases follow [semantic versioning](http://semver.org/).
 
@@ -18,7 +16,7 @@ To receive updates about new versions:
 * "Watch" this GitHub repository
 
 You can find and start technical discussions using the [Stack Overflow card.io tag](http://stackoverflow.com/questions/tagged/card.io).
- 
+
 **CocoaPods users:** We strongly recommend that you [include your Pods directory in source control](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?), as for security reasons we may sometimes stop distributing old versions of the SDK. For details, see [this discussion of the card.io SDK pod](https://github.com/card-io/card.io-iOS-SDK/issues/24).
 
 Sample app
@@ -118,4 +116,166 @@ Write delegate methods to receive the card info or a cancellation:
 
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
   // The full card number is available as info.cardNumber, but don't log that!
-  NSLog(@"Received card info. Number: %@, expiry
+  NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
+  // Use the card info...
+  [scanViewController dismissModalViewControllerAnimated:YES];
+}
+```
+
+#### Integrate as a View
+
+*CardIOView is new as of card.io Version 3.3.0 (September 2013). We look forward to seeing how creative developers integrate it into their apps. If you do something cool with it, share it with [@cardio](https://twitter.com/cardio)! We also look forward to quickly resolving any issues that you may discover.*
+
+Create a class (most likely a subclass of `UIViewController`) that conforms to `CardIOViewDelegate`.
+
+```obj-c
+// SomeViewController.h
+
+#import "CardIO.h"
+@interface SomeViewController : UIViewController<CardIOViewDelegate>
+// ...
+```
+
+Using a CardIOView provides UI flexibility. Here are two sample integration options:
+
+* Create a CardIOView when you need it, and then delete it when its work is finished.
+* Include a hidden CardIOView in your view, show it when you need it, and then hide it when its work is finished.
+
+##### Option 1: Create a CardIOView when you need it
+
+Confirm that the user's device is capable of scanning cards:
+
+```obj-c
+// SomeViewController.m
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  if (![CardIOView canReadCardWithCamera]) {
+    // Hide your "Scan Card" button, or take other appropriate action...
+  }
+}
+```
+
+Start card.io card scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (IBAction)scanCard:(id)sender {
+  CardIOView *cardIOView = [[CardIOView alloc] initWithFrame:CGRECT_WITHIN_YOUR_VIEW];
+  
+  cardIOView.appToken = @"YOUR_APP_TOKEN_HERE"; // get your app token from the card.io website
+  cardIOView.delegate = self;
+  
+  [self.view addSubview:cardIOView];
+}
+```
+
+Write the delegate method to receive the results:
+
+```obj-c
+// SomeViewController.m
+
+- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)info {
+    if (info) {
+    // The full card number is available as info.cardNumber, but don't log that!
+    NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
+    // Use the card info...
+  }
+  else {
+    NSLog(@"User cancelled payment info");
+    // Handle user cancellation here...
+  }
+  
+  [cardIOView removeFromSuperview];
+}
+```
+
+Include a method to cancel card scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (IBAction)cancelScanCard:(id)sender {
+  [cardIOView removeFromSuperview];
+}
+```
+
+##### Option 2: Include a hidden CardIOView in your view
+
+Make an IBOutlet property:
+
+```obj-c
+// SomeViewController.m
+
+@interface SomeViewController ()
+@property(nonatomic, strong, readwrite) IBOutlet CardIOView *cardIOView;
+@end
+```
+
+In your .xib, include a CardIOView, mark it as `hidden`, and connect it to the IBOutlet property. (Note: usually you will want to set the background color of the CardIOView to `clearColor`.)
+
+After confirming that the user's device is capable of scanning cards, set the `appToken` and `delegate` properties of the CardIOView:
+
+```obj-c
+// SomeViewController.m
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  if (![CardIOView canReadCardWithCamera]) {
+    // Hide your "Scan Card" button, remove the CardIOView from your view, and/or take other appropriate action...
+  } else {
+    self.cardIOView.appToken = @"YOUR_APP_TOKEN_HERE"; // get your app token from the card.io website
+    self.cardIOView.delegate = self;
+  }
+}
+```
+
+Start card.io card scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (IBAction)scanCard:(id)sender {
+  self.cardIOView.hidden = NO;
+}
+```
+
+Write the delegate method to receive the results:
+
+```obj-c
+// SomeViewController.m
+
+- (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)info {
+    if (info) {
+    // The full card number is available as info.cardNumber, but don't log that!
+    NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
+    // Use the card info...
+  }
+  else {
+    NSLog(@"User canceled payment info");
+    // Handle user cancellation here...
+  }
+
+  cardIOView.hidden = YES;
+}
+```
+
+Include a method to cancel card scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (IBAction)cancelScanCard:(id)sender {
+  self.cardIOView.hidden = YES;
+}
+```
+
+
+### Hints & Tips
+
+* Processing images can be memory intensive, so make sure to test that your app properly handles memory warnings.
+* For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
+**Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
