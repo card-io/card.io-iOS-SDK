@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.5.0 (Wed 2/26/2014)
+
+* Add suppressScannedCardImage property to CardIOPaymentViewController (github issue #33)
+
+--
+
 3.4.4 (Tue 1/14/2014)
 
 * Fix two very rare bugs:
