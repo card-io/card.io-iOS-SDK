@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.0 (Thu 3/6/2014)
+
+* New appearance of the "Cancel" and "Enter Manually" buttons in camera view, including automatic button rotation to match device orientation.
+* New property, allowFreelyRotatingCardGuide, for both CardIOPaymentViewController and CardIOView; provides the option to constrain camera-view UI rotation to follow standard iOS behavior.
+* The manual entry screen now includes a landscape orientation.
+
+--
+
 3.5.0 (Wed 2/26/2014)
 
 * Add suppressScannedCardImage property to CardIOPaymentViewController (github issue #33)
