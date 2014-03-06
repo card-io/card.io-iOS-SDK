@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.1 (Thu 3/6/2014)
+
+* Fix a compiler issue caused by a change in header file import ordering.
+
+--
+
 3.6.0 (Thu 3/6/2014)
 
 * New appearance of the "Cancel" and "Enter Manually" buttons in camera view, including automatic button rotation to match device orientation.
