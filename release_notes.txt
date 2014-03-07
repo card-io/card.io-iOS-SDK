@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.2 (Fri 3/7/2014)
+
+* Fix an orientation glitch when no camera is available.
+
+--
+
 3.6.1 (Thu 3/6/2014)
 
 * Fix a compiler issue caused by a change in header file import ordering.
