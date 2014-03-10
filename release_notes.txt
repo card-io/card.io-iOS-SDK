@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.3 (Mon 3/10/2014)
+
+* Repair the disableManualEntryButtons property. (github issue #38)
+
+--
+
 3.6.2 (Fri 3/7/2014)
 
 * Fix an orientation glitch when no camera is available.
