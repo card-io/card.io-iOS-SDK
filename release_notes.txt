@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.4 (Tue 4/1/2014)
+
+* When the data-entry screen appears, automatically enter text-editing mode. (github issue #41)
+
+--
+
 3.6.3 (Mon 3/10/2014)
 
 * Repair the disableManualEntryButtons property. (github issue #38)
