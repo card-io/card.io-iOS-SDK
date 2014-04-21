@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.6.5 (Mon 4/21/2014)
+
+* Add Thai (th) to our supported localizations.
+
+--
+
 3.6.4 (Tue 4/1/2014)
 
 * When the data-entry screen appears, automatically enter text-editing mode. (github issue #41)
