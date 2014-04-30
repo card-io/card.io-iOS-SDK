@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+3.7.0 (Wed 4/30/2014)
+
+* Add new maskManualEntryDigits property to CardIOPaymentViewController.
+* Update PayPal logo.
+
+--
+
 3.6.5 (Mon 4/21/2014)
 
 * Add Thai (th) to our supported localizations.
