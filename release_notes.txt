@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.7.1 (Mon 5/19/2014)
+
+* Improve handling of Traditional Chinese. (github issue #47)
+
+--
+
 3.7.0 (Wed 4/30/2014)
 
 * Add new maskManualEntryDigits property to CardIOPaymentViewController.
