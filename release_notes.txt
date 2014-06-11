@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.0 (Wed 6/11/2014)
+
+* Accept Diners Club and China UnionPay card numbers as valid Discover card numbers.
+* Allow manual entry of card numbers with unrecognized prefixes, as long as the card number passes the Luhn checksum test.
+* Make zh-Hant_HK the default dialect for zh-Hant (Traditional Chinese). (zh-Hant_TW remains available, as well.)
+
+--
+
 3.7.1 (Mon 5/19/2014)
 
 * Improve handling of Traditional Chinese. (github issue #47)
