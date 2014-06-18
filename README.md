@@ -6,8 +6,6 @@ card.io SDK for iOS
 Stay up to date
 ---------------
 
-**Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
-
 Please keep your app up to date with the latest version of the SDK.
 All releases follow [semantic versioning](http://semver.org/).
 
@@ -19,14 +17,12 @@ To receive updates about new versions:
 
 You can find and start technical discussions using the [Stack Overflow card.io tag](http://stackoverflow.com/questions/tagged/card.io).
 
-**CocoaPods users:** We strongly recommend that you [include your Pods directory in source control](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?), as for security reasons we may sometimes stop distributing old versions of the SDK. For details, see [this discussion of the card.io SDK pod](https://github.com/card-io/card.io-iOS-SDK/issues/24).
-
 Sample app
 ----------
 
 For a quick first look at card.io, we have included a very small sample application that you can build and run.
 
-1. **Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
+1. Download the latest version of the SDK.
 2. Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
 
 
@@ -45,7 +41,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Setup
 
-1. **Get the latest SDK by downloading an archive of [the most recent release](https://github.com/card-io/card.io-iOS-SDK/releases).**
+1. Download the latest version of the SDK.
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
 4. *Either:*
