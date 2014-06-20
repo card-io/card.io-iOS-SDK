@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.1 (Thu 6/19/2014)
+
+* Fix an iOS 8 (beta 2) crash.
+
+--
+
 3.8.0 (Wed 6/11/2014)
 
 * Accept Diners Club and China UnionPay card numbers as valid Discover card numbers.

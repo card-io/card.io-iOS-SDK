@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CardIO'
-  spec.version          = '3.8.0'
+  spec.version          = '3.8.1'
   spec.license          = { type: 'MIT', file: 'LICENSE.md' }
   spec.homepage         = 'https://www.card.io'
   spec.authors          = { 'CardIO' => 'support@paypal.com' }
   spec.summary          = 'Credit card scanning for mobile apps'
   spec.social_media_url = 'https://twitter.com/cardio'
-  spec.source           = { :git => 'https://github.com/card-io/card.io-iOS-SDK.git', :tag => '3.8.0' }
+  spec.source           = { :git => 'https://github.com/card-io/card.io-iOS-SDK.git', :tag => "#{spec.version}" }
   spec.platform         = :ios, '6.0'
   spec.ios.deployment_target = '6.0'
   spec.requires_arc     = true
