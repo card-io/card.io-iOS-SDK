@@ -1,9 +1,15 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.3 (Tue 7/8/2014)
+
+* Fix a very rare problem involving the app caches directory getting cleared. (see https://github.com/paypal/PayPal-iOS-SDK/issues/163)
+
+--
+
 3.8.2 (Thu 7/3/2014)
 
-* Fix some localization issues (see https://github.com/paypal/PayPal-iOS-SDK/issues/164)
+* Fix some localization issues. (see https://github.com/paypal/PayPal-iOS-SDK/issues/164)
 
 --
 
