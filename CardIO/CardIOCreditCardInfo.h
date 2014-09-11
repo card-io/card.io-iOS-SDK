@@ -1,6 +1,6 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 3.8.4
+//  Version 3.8.5
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
