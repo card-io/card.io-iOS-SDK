@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.4 (Wed 9/10/2014)
+
+* Build with Xcode 6 GM seed.
+* Update a few localized strings. (including: https://github.com/card-io/card.io-iOS-SDK/issues/65)
+
+--
+
 3.8.3 (Tue 7/8/2014)
 
 * Fix a very rare problem involving the app caches directory getting cleared. (see https://github.com/paypal/PayPal-iOS-SDK/issues/163)
