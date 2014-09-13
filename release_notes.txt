@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.6 (Fri 9/12/2014)
+
+* Solve (hopefully!) a build problem for Xcode 5 users. (see https://github.com/card-io/card.io-iOS-SDK/issues/66)
+
+--
+
 3.8.5 (Thu 9/11/2014)
 
 * Add armv7s slice (work around an Xcode 6 bug).
