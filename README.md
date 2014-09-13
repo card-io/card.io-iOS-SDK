@@ -59,8 +59,10 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
      * Security
      * UIKit
 5. *or,* if you are using Xcode 5 or newer:
-  * Add only this single framework to your project:
-    * AVFoundation (as an `Optional` [i.e., weak-linked] library)
+  * Add only these frameworks to your project  (as `Optional` [i.e., weak-linked] libraries):
+    * AVFoundation
+    * AudioToolbox
+    * CoreMedia
   * and confirm that these two Build Settings are both enabled:
     * `Enable Modules (C and Objective-C)`
     * `Link Frameworks Automatically`
