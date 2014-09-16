@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.8.7 (Tue 9/16/2014)
+
+* Fix a crash that could occur if a user has restricted your app's camera access.
+
+--
+
 3.8.6 (Fri 9/12/2014)
 
 * Solve (hopefully!) a build problem for Xcode 5 users. (see https://github.com/card-io/card.io-iOS-SDK/issues/66)
