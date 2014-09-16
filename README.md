@@ -63,6 +63,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
     * AVFoundation
     * AudioToolbox
     * CoreMedia
+    * MobileCoreServices
   * and confirm that these two Build Settings are both enabled:
     * `Enable Modules (C and Objective-C)`
     * `Link Frameworks Automatically`
