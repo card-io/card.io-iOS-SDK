@@ -1,6 +1,6 @@
 //
 //  CardIOView.h
-//  Version 3.8.7
+//  Version 3.9.0
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -16,6 +16,15 @@
 /// factors such as hardware support and OS version.
 /// @return YES iff the user's device supports camera-based card scanning.
 + (BOOL)canReadCardWithCamera;
+
+/// The preload method prepares card.io to launch faster. Calling preload is optional but suggested.
+/// On an iPhone 5S, for example, preloading makes card.io launch ~400ms faster.
+/// The best time to call preload is when displaying a view from which card.io might be launched;
+/// e.g., inside your view controller's viewWillAppear: method.
+/// preload works in the background; the call to preload returns immediately.
+/// The preload method of CardIOPaymentViewController and of CardIOView do the same work,
+/// so a call to either of them suffices.
++ (void)preload;
 
 
 #pragma mark - Properties you MUST set

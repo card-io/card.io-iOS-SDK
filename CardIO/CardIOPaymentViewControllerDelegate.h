@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewControllerDelegate.h
-//  Version 3.8.7
+//  Version 3.9.0
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //

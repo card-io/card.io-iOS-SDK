@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.9.0 (Tue 9/23/2014)
+
+* Add new optional method `preload` to noticeably speed up the creation of your first CardIOView or CardIOPaymentViewController.
+
+--
+
 3.8.7 (Tue 9/16/2014)
 
 * Fix a crash that could occur if a user has restricted your app's camera access.

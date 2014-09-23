@@ -92,6 +92,18 @@ Create a class (most likely a subclass of `UIViewController`) that conforms to `
 // ...
 ```
 
+Make an optional call to speed up the subsequent launch of card.io scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [CardIOPaymentViewController preload];
+}
+
+```
+
 Start card.io card scanning:
 
 ```obj-c
@@ -125,8 +137,6 @@ Write delegate methods to receive the card info or a cancellation:
 
 #### Integrate as a View
 
-*CardIOView is new as of card.io Version 3.3.0 (September 2013). We look forward to seeing how creative developers integrate it into their apps. If you do something cool with it, share it with [@cardio](https://twitter.com/cardio)! We also look forward to quickly resolving any issues that you may discover.*
-
 Create a class (most likely a subclass of `UIViewController`) that conforms to `CardIOViewDelegate`.
 
 ```obj-c
@@ -156,6 +166,18 @@ Confirm that the user's device is capable of scanning cards:
     // Hide your "Scan Card" button, or take other appropriate action...
   }
 }
+```
+
+Make an optional call to speed up the subsequent launch of card.io scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [CardIOView preload];
+}
+
 ```
 
 Start card.io card scanning:
@@ -234,6 +256,18 @@ After confirming that the user's device is capable of scanning cards, set the `a
 }
 ```
 
+Make an optional call to speed up the subsequent launch of card.io scanning:
+
+```obj-c
+// SomeViewController.m
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [CardIOView preload];
+}
+
+```
+
 Start card.io card scanning:
 
 ```obj-c
@@ -280,3 +314,4 @@ Include a method to cancel card scanning:
 * Processing images can be memory intensive, so make sure to test that your app properly handles memory warnings.
 * For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
 **Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
+* The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call the `preload` method (of either class) in advance, so that this resource loading occurs in advance on a background thread.
