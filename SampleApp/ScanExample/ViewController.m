@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 
-#import "Constants.h"
 #import "CardIO.h"
 
 @interface ViewController () <CardIOPaymentViewControllerDelegate>
@@ -36,7 +35,6 @@
 - (void)scanCardClicked:(id)sender {
     CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
     scanViewController.modalPresentationStyle = UIModalPresentationFormSheet;
-    scanViewController.appToken = CardIOAppToken; // see Constants.h
     [self presentViewController:scanViewController animated:YES completion:nil];
 }
 

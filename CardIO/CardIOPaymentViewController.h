@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 3.9.0
+//  Version 3.10.0
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -26,10 +26,6 @@
 /// @return Properly initialized CardIOPaymentViewController.
 - (id)initWithPaymentDelegate:(id<CardIOPaymentViewControllerDelegate>)aDelegate scanningEnabled:(BOOL)scanningEnabled;
 
-/// The application token you obtained from the card.io website.
-/// If not set before presenting the view controller, an exception will be thrown.
-@property(nonatomic, copy, readwrite) NSString *appToken;
-
 /// The preferred language for all strings appearing in the user interface.
 /// If not set, or if set to nil, defaults to the device's current language setting.
 ///
@@ -42,7 +38,7 @@
 /// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 ///
 /// These localizations are currently included:
-/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
+/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,is,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 /// If YES, the status bar's style will be kept as whatever your app has set it to.

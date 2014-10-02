@@ -50,7 +50,6 @@
 		0A96B646156447D400DBA017 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0A96B648156447DB00DBA017 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2680866016FFAC7A0058FD24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		2680866E16FFB0EA0058FD24 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2680866F16FFB2A00058FD24 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3EB7591D18341EB80008860A /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		3EB7591E18341EB80008860A /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
@@ -125,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				0A2C903E1564175A000727BC /* Supporting Files */,
-				2680866E16FFB0EA0058FD24 /* Constants.h */,
 				0A2C90461564175A000727BC /* AppDelegate.h */,
 				0A2C90471564175A000727BC /* AppDelegate.m */,
 				0A2C90491564175A000727BC /* MainStoryboard_iPhone.storyboard */,

@@ -1,6 +1,6 @@
 //
 //  CardIOViewDelegate.h
-//  Version 3.9.0
+//  Version 3.10.0
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -20,7 +20,7 @@
 /// At a minimum, you should give the user an opportunity to confirm that the card information was captured correctly.
 /// @param cardIOView The active CardIOView.
 /// @param cardInfo The results of the scan.
-/// @note cardInfo will be nil if exiting due to a problem (e.g., no available camera, or an invalid appToken).
+/// @note cardInfo will be nil if exiting due to a problem (e.g., no available camera).
 - (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)cardInfo;
 
 @end

@@ -31,9 +31,7 @@ Instructions
 
 The card.io iOS SDK includes header files and a single static library. We'll walk you through integration and usage.
 
-### Sign up for card.io
-
-*   To use the card.io SDK, you'll need to [sign up](https://www.card.io/accounts/register/developer) and [get an app token](https://www.card.io/apps/). 
+*(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)*
 
 ### Requirements
 
@@ -111,7 +109,6 @@ Start card.io card scanning:
 
 - (IBAction)scanCard:(id)sender {
   CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
-  scanViewController.appToken = @"YOUR_APP_TOKEN_HERE"; // get your app token from the card.io website
   [self presentModalViewController:scanViewController animated:YES];
 }
 ```
@@ -187,8 +184,6 @@ Start card.io card scanning:
 
 - (IBAction)scanCard:(id)sender {
   CardIOView *cardIOView = [[CardIOView alloc] initWithFrame:CGRECT_WITHIN_YOUR_VIEW];
-  
-  cardIOView.appToken = @"YOUR_APP_TOKEN_HERE"; // get your app token from the card.io website
   cardIOView.delegate = self;
   
   [self.view addSubview:cardIOView];
@@ -239,7 +234,7 @@ Make an IBOutlet property:
 
 In your .xib, include a CardIOView, mark it as `hidden`, and connect it to the IBOutlet property. (Note: usually you will want to set the background color of the CardIOView to `clearColor`.)
 
-After confirming that the user's device is capable of scanning cards, set the `appToken` and `delegate` properties of the CardIOView:
+After confirming that the user's device is capable of scanning cards, set the `delegate` property of the CardIOView:
 
 ```obj-c
 // SomeViewController.m
@@ -250,7 +245,6 @@ After confirming that the user's device is capable of scanning cards, set the `a
   if (![CardIOView canReadCardWithCamera]) {
     // Hide your "Scan Card" button, remove the CardIOView from your view, and/or take other appropriate action...
   } else {
-    self.cardIOView.appToken = @"YOUR_APP_TOKEN_HERE"; // get your app token from the card.io website
     self.cardIOView.delegate = self;
   }
 }

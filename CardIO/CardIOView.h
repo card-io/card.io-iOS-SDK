@@ -1,6 +1,6 @@
 //
 //  CardIOView.h
-//  Version 3.9.0
+//  Version 3.10.0
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -29,9 +29,6 @@
 
 #pragma mark - Properties you MUST set
 
-/// Your app token. MUST be set before the CardIOView appears.
-@property(nonatomic, copy, readwrite) NSString *appToken;
-
 /// Typically, your view controller will set itself as this delegate.
 @property(nonatomic, strong, readwrite) id<CardIOViewDelegate> delegate;
 
@@ -50,7 +47,7 @@
 /// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 ///
 /// These localizations are currently included:
-/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
+/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,is,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 /// Alter the card guide (bracket) color. Opaque colors recommended.
