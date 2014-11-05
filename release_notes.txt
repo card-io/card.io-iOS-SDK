@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+3.10.1 (Wed 11/5/2014)
+
+* Restore App Token as a deprecated property, so that existing card.io integrations will continue to build without modification.
+
+--
+
 3.10.0 (Thu 10/2/2014)
 
 * Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.

@@ -1,6 +1,6 @@
 //
 //  CardIOView.h
-//  Version 3.10.0
+//  Version 3.10.1
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -77,5 +77,11 @@
 /// The actual camera preview area within the CardIOView. Location is relative to the CardIOView's origin.
 /// You might want to use this, for example, when adjusting your view controller's view layout.
 @property(nonatomic, assign, readonly) CGRect cameraPreviewFrame;
+
+
+#pragma mark - Deprecated properties
+
+/// Previous versions of card.io (prior to 3.10.0) required you to obtain an "application token" from the card.io website.
+@property(nonatomic, copy, readwrite) NSString *appToken __attribute__((deprecated("The former appToken is no longer required.")));
 
 @end

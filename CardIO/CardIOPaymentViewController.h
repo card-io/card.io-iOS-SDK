@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 3.10.0
+//  Version 3.10.1
 //
 //  Copyright (c) 2011-2014 PayPal. All rights reserved.
 //
@@ -135,6 +135,13 @@
 /// @return Human-readable version of this library.
 + (NSString *)libraryVersion;
 
-/// Previous versions of card.io provided an informative message when the user first launched card.io.
+
+#pragma mark - Deprecated properties
+
+/// Previous versions of card.io (prior to 3.2.3) provided an informative message when the user first launched card.io.
 @property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert __attribute__((deprecated("The former first-time alert is no more.")));
+
+/// Previous versions of card.io (prior to 3.10.0) required you to obtain an "application token" from the card.io website.
+@property(nonatomic, copy, readwrite) NSString *appToken __attribute__((deprecated("The former appToken is no longer required.")));
+
 @end
