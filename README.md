@@ -39,8 +39,8 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Podfile
 ```ruby
-platform :ios
-pod 'CardIO', '~> 3.10.1'
+platform :ios, '6.0'
+pod 'CardIO'
 ```
 
 ### Setup
