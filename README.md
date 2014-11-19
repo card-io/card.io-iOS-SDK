@@ -109,7 +109,7 @@ Start card.io card scanning:
 
 - (IBAction)scanCard:(id)sender {
   CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
-  [self presentModalViewController:scanViewController animated:YES];
+  [self presentViewController:scanViewController animated:YES completion:nil];
 }
 ```
 
@@ -121,14 +121,14 @@ Write delegate methods to receive the card info or a cancellation:
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
   NSLog(@"User canceled payment info");
   // Handle user cancellation here...
-  [scanViewController dismissModalViewControllerAnimated:YES];
+  [scanViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
   // The full card number is available as info.cardNumber, but don't log that!
   NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
   // Use the card info...
-  [scanViewController dismissModalViewControllerAnimated:YES];
+  [scanViewController dismissViewControllerAnimated:YES completion:nil];
 }
 ```
 
