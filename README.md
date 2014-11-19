@@ -109,7 +109,7 @@ Start card.io card scanning:
 
 - (IBAction)scanCard:(id)sender {
   CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
-  [self presentModalViewController:scanViewController animated:YES];
+  [self presentViewController:scanViewController animated:YES completion:nil];
 }
 ```
 
