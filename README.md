@@ -39,6 +39,15 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Setup
 
+##### If you use [CocoaPods](http://cocoapods.org), then add these lines to your podfile:
+
+```ruby
+platform :ios, '6.1'
+pod 'CardIO'
+```
+
+##### If you don't use CocoaPods, then:
+
 1. Download the latest version of the SDK.
 2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
@@ -65,9 +74,12 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
   * and confirm that these two Build Settings are both enabled:
     * `Enable Modules (C and Objective-C)`
     * `Link Frameworks Automatically`
-6.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
+
+##### With or without CocoaPods:
+
+1.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
 [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
-7.  Refer to the header files for more usage options and information.
+2.  Refer to the header files for more usage options and information.
 
 ### Sample code
 
