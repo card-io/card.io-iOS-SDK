@@ -1,8 +1,8 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 3.10.1
+//  Version 4.0.0
 //
-//  Copyright (c) 2011-2014 PayPal. All rights reserved.
+//  See the file "LICENSE.md" for the full license governing this code.
 //
 
 #import <Foundation/Foundation.h>
@@ -62,6 +62,8 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 /// Was the card number scanned (as opposed to entered manually)?
 @property(nonatomic, assign, readwrite) BOOL scanned;
 
+/// The rectified card image; usually 428x270.
+@property(nonatomic, strong, readwrite) UIImage *cardImage;
 
 /// Derived from cardNumber.
 /// @note CardIOCreditInfo objects returned by either of the delegate methods

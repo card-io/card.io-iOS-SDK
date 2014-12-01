@@ -1,8 +1,8 @@
 //
 //  CardIO.h
-//  Version 3.10.1
+//  Version 4.0.0
 //
-//  Copyright (c) 2011-2014 PayPal. All rights reserved.
+//  See the file "LICENSE.md" for the full license governing this code.
 //
 
 // All-in-one header file for card.io sdk.
@@ -11,3 +11,4 @@
 #import "CardIOViewDelegate.h"
 #import "CardIOPaymentViewController.h"
 #import "CardIOPaymentViewControllerDelegate.h"
+#import "CardIOUtilities.h"

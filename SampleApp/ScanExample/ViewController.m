@@ -27,7 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOPaymentViewController preload];
+  [CardIOUtilities preload];
 }
 
 #pragma mark - User Actions

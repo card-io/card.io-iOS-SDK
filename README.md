@@ -31,8 +31,6 @@ Instructions
 
 The card.io iOS SDK includes header files and a single static library. We'll walk you through integration and usage.
 
-*(Note: in the past, developers needed to sign up at the [card.io site](https://www.card.io) and obtain an* `app token`. *This is no longer required.)*
-
 ### Requirements
 
 *   Supports target deployment of iOS version 6.1+ and instruction set armv7+ (including 64-bit).
@@ -109,7 +107,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOPaymentViewController preload];
+  [CardIOUtilities preload];
 }
 
 ```
@@ -146,6 +144,8 @@ Write delegate methods to receive the card info or a cancellation:
 
 #### Integrate as a View
 
+*CardIOView is new as of card.io Version 3.3.0 (September 2013). We look forward to seeing how creative developers integrate it into their apps. If you do something cool with it, share it with [@cardio](https://twitter.com/cardio)! We also look forward to quickly resolving any issues that you may discover.*
+
 Create a class (most likely a subclass of `UIViewController`) that conforms to `CardIOViewDelegate`.
 
 ```obj-c
@@ -171,7 +171,7 @@ Confirm that the user's device is capable of scanning cards:
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  if (![CardIOView canReadCardWithCamera]) {
+  if (![CardIOUtilities canReadCardWithCamera]) {
     // Hide your "Scan Card" button, or take other appropriate action...
   }
 }
@@ -184,7 +184,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOView preload];
+  [CardIOUtilities preload];
 }
 
 ```
@@ -254,7 +254,7 @@ After confirming that the user's device is capable of scanning cards, set the `d
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  if (![CardIOView canReadCardWithCamera]) {
+  if (![CardIOUtilities canReadCardWithCamera]) {
     // Hide your "Scan Card" button, remove the CardIOView from your view, and/or take other appropriate action...
   } else {
     self.cardIOView.delegate = self;
@@ -269,7 +269,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOView preload];
+  [CardIOUtilities preload];
 }
 
 ```
@@ -320,4 +320,4 @@ Include a method to cancel card scanning:
 * Processing images can be memory intensive, so make sure to test that your app properly handles memory warnings.
 * For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
 **Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
-* The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call the `preload` method (of either class) in advance, so that this resource loading occurs in advance on a background thread.
+* The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call `[CardIOUtilities preload]` in advance, so that this resource loading occurs in advance on a background thread.

@@ -1,6 +1,26 @@
 card.io iOS SDK release notes
 =============================
 
+4.0.0 (Mon 12/1/2014)
+
+* Build from the new open-source edition of card.io: https://github.com/card-io/card.io-iOS-source
+* New class: CardIOUtilities
+  - libraryVersion         (formerly a method of CardIOPaymentViewController)
+  - canReadCardWithCamera  (formerly a method of CardIOPaymentViewController)
+  - preload                (formerly a method of CardIOView and of CardIOPaymentViewController)
+  - blurredScreenImageView (new method)
+* New property on CardIOCreditCardInfo:
+  - cardImage
+* New properties on CardIOView and CardIOPaymentViewController:
+  - scanInstructions
+  - hideCardIOLogo
+  - scanOverlayView
+  - detectionMode
+* New notification:
+  - CardIOScanningOrientationDidChangeNotification
+
+--
+
 3.10.1 (Wed 11/5/2014)
 
 * Restore App Token as a deprecated property, so that existing card.io integrations will continue to build without modification.
