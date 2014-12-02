@@ -1,7 +1,22 @@
+[![card.io logo](https://raw.githubusercontent.com/card-io/card.io-iOS-source/master/Resources/cardio_logo_220.png "card.io")](https://www.card.io)
+
 card.io SDK for iOS
 ===================
 
 [card.io](https://www.card.io/) provides fast, easy credit card scanning in mobile apps.
+
+> #### *NEW!!! card.io is now an open-source project!*
+> 
+> As of December 2014, all of the source code for card.io is now available at the [card.io-iOS-source repo](https://github.com/card-io/card.io-iOS-source).
+> 
+> ##### What does this mean for you?
+> 
+> * If you simply wish to integrate card.io into your mobile apps, then you can (and probably should) ignore the existence of [card.io-iOS-source](https://github.com/card-io/card.io-iOS-source).
+> * But if you're curious about how card.io performs its magic, or if you'd like to improve the appearance or behavior of card.io, then come visit [card.io-iOS-source](https://github.com/card-io/card.io-iOS-source)!
+
+Brought to you by  
+[![PayPal logo](https://raw.githubusercontent.com/card-io/card.io-iOS-source/master/Resources/pp_h_rgb.png)](https://paypal.com/ "PayPal")
+
 
 Stay up to date
 ---------------
