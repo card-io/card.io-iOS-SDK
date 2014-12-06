@@ -38,7 +38,7 @@ Sample app
 For a quick first look at card.io, we have included a very small sample application that you can build and run.
 
 1. Download the latest version of the SDK.
-2. Simply open the `SampleApp` folder and follow the instructions in the `README.md` file you find there.
+2. Simply open the `SampleApp` folder or the `SampleApp-Swift` folder and follow the instructions in the `README.md` file you find there.
 
 
 Instructions
