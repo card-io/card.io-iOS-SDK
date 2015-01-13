@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+4.0.2 (Tue 1/13/2015)
+
+* Fix an iOS 8 display issue involving right-to-left languages. (https://github.com/card-io/card.io-iOS-SDK/issues/90)
+* In the manual-input screen combine Expiry and CVV into a single row, for more languages than before.
+
+--
+
 4.0.1 (Mon 1/5/2015)
 
 * Fix a potential rare crash. (see https://github.com/paypal/PayPal-iOS-SDK/issues/220 for a similar case)
