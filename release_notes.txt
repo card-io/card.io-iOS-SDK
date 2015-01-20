@@ -1,6 +1,16 @@
 card.io iOS SDK release notes
 =============================
 
+5.0.0 (Tue 1/20/2015)
+
+* Add automatic expiry-scanning.
+  You can disable this feature via the new `scanExpiry` property of either CardIOView or CardIOPaymentViewController.
+  Note: Expiry scans will not infrequently fail to obtain the correct expiry date.
+        We are continuing to work to improve expiry-scanning accuracy.
+* Remove various deprecated properties.
+
+--
+
 4.0.2 (Tue 1/13/2015)
 
 * Fix an iOS 8 display issue involving right-to-left languages. (https://github.com/card-io/card.io-iOS-SDK/issues/90)
