@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CardIO'
-  spec.version          = '5.0.0'
+  spec.version          = '5.0.1'
   spec.license          = { type: 'MIT', file: 'LICENSE.md' }
   spec.homepage         = 'https://www.card.io'
   spec.authors          = { 'CardIO' => 'support@paypal.com' }
