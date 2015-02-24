@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+5.0.2 (Mon 2/23/2015)
+
+* Re-enable expiry-scanning for 32-bit devices (e.g., iPhone 4S).
+
+--
+
 5.0.1 (Tue 2/10/2015)
 
 * Simplify expiry-scanning code to improve accuracy and also decrease library size a bit.
