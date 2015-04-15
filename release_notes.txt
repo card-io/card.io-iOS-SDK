@@ -1,6 +1,15 @@
 card.io iOS SDK release notes
 =============================
 
+5.0.4 (Tue 4/14/2015)
+
+* Check existing video permissions before presenting camera view.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/99)
+* Restrict expiry year manual input to 2 digits in all cases.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/104)
+
+--
+
 5.0.3 (Tue 3/17/2015)
 
 * On scan cancelation, eliminate a visual stutter.

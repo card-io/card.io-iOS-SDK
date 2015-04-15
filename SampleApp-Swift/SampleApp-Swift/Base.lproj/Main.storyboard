@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,11 +23,11 @@
                                     <constraint firstAttribute="width" constant="300" id="saB-lV-1Ja"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wu-dt-vfp">
-                                <rect key="frame" x="264" y="50" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wu-dt-vfp">
+                                <rect key="frame" x="264" y="75" width="73" height="25"/>
                                 <state key="normal" title="Scan Card">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,10 +39,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="RN3-ZX-uyW" secondAttribute="centerX" id="9NV-Wg-jNb"/>
+                            <constraint firstItem="RN3-ZX-uyW" firstAttribute="top" secondItem="6wu-dt-vfp" secondAttribute="bottom" constant="8" symbolic="YES" id="Gc5-Cp-AzK"/>
                             <constraint firstAttribute="centerY" secondItem="RN3-ZX-uyW" secondAttribute="centerY" constant="74" id="IpO-6t-Ids"/>
-                            <constraint firstAttribute="centerX" secondItem="6wu-dt-vfp" secondAttribute="centerX" id="Vpq-hA-5Ve"/>
-                            <constraint firstItem="RN3-ZX-uyW" firstAttribute="top" secondItem="6wu-dt-vfp" secondAttribute="bottom" constant="8" id="opr-g8-aEN"/>
+                            <constraint firstAttribute="centerX" secondItem="6wu-dt-vfp" secondAttribute="centerX" id="QG3-P9-yf4"/>
+                            <constraint firstItem="6wu-dt-vfp" firstAttribute="centerX" secondItem="RN3-ZX-uyW" secondAttribute="centerX" id="Uh4-u3-RjP"/>
+                            <constraint firstItem="6wu-dt-vfp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="75" id="u8l-Wq-ERk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gc5-Cp-AzK"/>
+                                <exclude reference="Uh4-u3-RjP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="RN3-ZX-uyW" id="jVY-aE-csY"/>
