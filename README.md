@@ -52,10 +52,9 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Setup
 
-##### If you use [CocoaPods](http://cocoapods.org), then add these lines to your podfile:
+##### If you use [CocoaPods](http://cocoapods.org), then add this line to your podfile:
 
 ```ruby
-platform :ios, '6.1'
 pod 'CardIO'
 ```
 
