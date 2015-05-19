@@ -1,6 +1,6 @@
 //
 //  CardIO.h
-//  Version 5.0.4
+//  Version 5.0.5
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //

@@ -35,7 +35,7 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
   func userDidProvideCreditCardInfo(cardInfo: CardIOCreditCardInfo!, inPaymentViewController paymentViewController: CardIOPaymentViewController!) {
     if let info = cardInfo {
       let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-      resultLabel.text = str
+      resultLabel.text = str as String
     }
     paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
   }  
