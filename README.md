@@ -61,7 +61,7 @@ pod 'CardIO'
 #### If you use [Carthage](https://github.com/Carthage/Carthage), then add this to your Cartfile:
 
 ```ruby
-github card-io/card.io-iOS-SDK >= 5.0
+github "card-io/card.io-iOS-SDK" >= 5.0
 ```
 
 Then `carthage bootstrap` do the usual, _drag .framework into `Linked Frameworks and Libraries`_, for the first build. Then you'll also need to add the libCardIO.a static library (only once, like with the .framework):
