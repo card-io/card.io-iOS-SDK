@@ -71,7 +71,7 @@ Then `carthage bootstrap` do the usual, _drag .framework into `Linked Frameworks
 3. Navigate to `Carthage/Build/iOS/CardIO.framework/`
 4. Add the `libCardIO.a`
 
-After you've done this you'll need to continue from step 4 in the list below.
+After you've done this you'll need to continue from step 3 in the list below.
 
 ##### If you don't use CocoaPods, then:
 
