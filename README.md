@@ -58,6 +58,21 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 pod 'CardIO'
 ```
 
+#### If you use [Carthage](https://github.com/Carthage/Carthage), then add this to your Cartfile:
+
+```ruby
+github card-io/card.io-iOS-SDK >= 5.0
+```
+
+Then `carthage bootstrap` do the usual, _drag .framework into `Linked Frameworks and Libraries`_, for the first build. Then you'll also need to add the libCardIO.a static library (only once, like with the .framework):
+
+1. Got to your target's build phases
+2. Click the `+` under "Link Binary With Libraries"
+3. Navigate to `Carthage/Build/iOS/CardIO.framework/
+4. Add the `libCardIO.a`
+
+After you've done this you'll need to continue from step 4 in the list below.
+
 ##### If you don't use CocoaPods, then:
 
 1. Download the latest version of the SDK.
