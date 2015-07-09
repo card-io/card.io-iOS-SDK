@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2B1C9F77-99DE-4503-8091-C66F6D979C55</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CardIO</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0FD0A04D323FE6C5E94E40E35BE35235DE544EB</key>
+		<string>github.com:Loot-App/card.io-iOS-SDK.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CardIO.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0FD0A04D323FE6C5E94E40E35BE35235DE544EB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Loot-App/card.io-iOS-SDK.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0FD0A04D323FE6C5E94E40E35BE35235DE544EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0FD0A04D323FE6C5E94E40E35BE35235DE544EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>card.io</string>
+		</dict>
+	</array>
+</dict>
+</plist>
