@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFDACFBC1B4EBB09009D9499 /* libCardIO.a in Resources */ = {isa = PBXBuildFile; fileRef = AFED990B1B4EB12F00AD3B28 /* libCardIO.a */; };
 		AFED98EE1B4EB00C00AD3B28 /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = AFED98ED1B4EB00C00AD3B28 /* CardIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFED98F41B4EB00C00AD3B28 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED98E81B4EB00C00AD3B28 /* CardIO.framework */; };
 		AFED98FB1B4EB00C00AD3B28 /* CardIOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFED98FA1B4EB00C00AD3B28 /* CardIOTests.m */; };
@@ -224,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDACFBC1B4EBB09009D9499 /* libCardIO.a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
