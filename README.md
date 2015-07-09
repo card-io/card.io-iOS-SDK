@@ -68,7 +68,7 @@ Then `carthage bootstrap` do the usual, _drag .framework into `Linked Frameworks
 
 1. Got to your target's build phases
 2. Click the `+` under "Link Binary With Libraries"
-3. Navigate to `Carthage/Build/iOS/CardIO.framework/
+3. Navigate to `Carthage/Build/iOS/CardIO.framework/`
 4. Add the `libCardIO.a`
 
 After you've done this you'll need to continue from step 4 in the list below.
