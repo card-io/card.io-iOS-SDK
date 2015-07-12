@@ -12,6 +12,8 @@
 @interface ViewController () <CardIOPaymentViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *snapshotImage;
 
 @end
 
@@ -46,6 +48,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
     self.infoLabel.text = [NSString stringWithFormat:@"Received card info. Number: %@, expiry: %02lu/%lu, cvv: %@.", info.redactedCardNumber, (unsigned long)info.expiryMonth, (unsigned long)info.expiryYear, info.cvv];
+    self.logoImage.image = info.cardImage;
+    self.snapshotImage.image = info.cardImage;
 }
 
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)paymentViewController {
