@@ -48,6 +48,7 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 
 ### Requirements
 
+*   The latest non-beta version of Xcode. (Older or newer versions *might* also work.)
 *   Supports target deployment of iOS version 6.1+ and instruction set armv7+ (including 64-bit).
 
 ### Setup
@@ -77,7 +78,7 @@ pod 'CardIO'
      * QuartzCore
      * Security
      * UIKit
-5. *or,* if you are using Xcode 5 or newer:
+5. *or:*
   * Add only these frameworks to your project  (as `Optional` [i.e., weak-linked] libraries):
     * AVFoundation
     * AudioToolbox

@@ -1,9 +1,21 @@
 card.io iOS SDK release notes
 =============================
 
+5.1.0 (Sun 7/12/2015)
+
+* Update project and sample apps for Xcode 6.4.
+* Expose `scannedImageDuration` in CardIOPaymentViewController.
+    (https://github.com/card-io/card.io-iOS-source/pull/29)
+* Better respect UISupportedInterfaceOrientation from the app plist.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/117)
+* Fix iOS 9 crash by removing some obsolete localization code.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/120)
+
+--
+
 5.0.6 (Thu 5/21/2015)
 
-* Prevent crash when user simultaneously taps `Cancel` and `Enter Manually` buttons
+* Prevent crash when user simultaneously taps `Cancel` and `Enter Manually` buttons.
     (https://github.com/card-io/card.io-iOS-SDK/issues/112)
 
 --
