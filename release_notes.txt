@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+5.1.1 (Wed 8/26/2015)
+
+* Update CocoaPods podspec to use `vendored_libraries`.
+    (https://github.com/card-io/card.io-iOS-SDK/pull/126)
+
+--
+
 5.1.0 (Sun 7/12/2015)
 
 * Update project and sample apps for Xcode 6.4.
