@@ -1,6 +1,6 @@
 //
 //  CardIOView.h
-//  Version 5.1.1
+//  Version 5.1.1-6-ga422a81
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
