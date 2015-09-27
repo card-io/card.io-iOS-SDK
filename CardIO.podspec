@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CardIO'
-  spec.version          = '5.1.1'
+  spec.version          = '5.1.1-bitcode'
   spec.license          = { type: 'MIT', file: 'LICENSE.md' }
   spec.homepage         = 'https://www.card.io'
   spec.authors          = { 'CardIO' => 'support@paypal.com' }
@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.source_files     = 'CardIO/*.h'
   spec.frameworks       = 'AVFoundation', 'AudioToolbox', 'CoreMedia', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'UIKit'
   spec.libraries        = 'c++'
-  spec.vendored_libraries = 'CardIO/libCardIO.a'
+  spec.vendored_libraries = 'CardIO/libCardIO.a', 'CardIO/libCardIO.a.zip'
 end
