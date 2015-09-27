@@ -62,7 +62,7 @@ and to the end of the file:
 
 ```ruby
 post_install do |installer|
-    system("unzip ./Pods/CardIO/CardIO/libCardIO.a.zip -d ./Pods/CardIO/CardIO && rm ./Pods/CardIO/CardIO/libCardIO.a.zip")
+    system("if [ -f ./Pods/CardIO/CardIO/libCardIO.a.zip ]; then unzip ./Pods/CardIO/CardIO/libCardIO.a.zip -o -d ./Pods/CardIO/CardIO && rm ./Pods/CardIO/CardIO/libCardIO.a.zip; fi")
 end
 ```
 
