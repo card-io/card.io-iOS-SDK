@@ -58,13 +58,21 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 ```ruby
 pod 'CardIO'
 ```
+and to the end of the file:
+
+```ruby
+post_install do |installer|
+    system("unzip ./Pods/CardIO/CardIO/libCardIO.a.zip -d ./Pods/CardIO/CardIO && rm ./Pods/CardIO/CardIO/libCardIO.a.zip")
+end
+```
 
 ##### If you don't use CocoaPods, then:
 
 1. Download the latest version of the SDK.
-2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
-3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
-4. *Either:*
+2. Unzip libCardIO.a.zip (after that zip file can be removed)
+3. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project.
+4. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
+5. *Either:*
   * Add these frameworks to your project.
 [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html) is supported.
      * AudioToolbox
@@ -78,7 +86,7 @@ pod 'CardIO'
      * QuartzCore
      * Security
      * UIKit
-5. *or:*
+6. *or:*
   * Add only these frameworks to your project  (as `Optional` [i.e., weak-linked] libraries):
     * AVFoundation
     * AudioToolbox
