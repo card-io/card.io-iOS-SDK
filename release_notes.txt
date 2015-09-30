@@ -1,6 +1,19 @@
 card.io iOS SDK release notes
 =============================
 
+5.2.0 (Wed 9/30/2015)
+
+* Enable Bitcode
+    (https://github.com/card-io/card.io-iOS-SDK/issues/119)
+    The library is now built with Xcode 7.0. It has Bitcode enabled which
+    does significantly increase the static library. However, when an app
+    is compiled and distributed by the App Store, the app size should not
+    significantly increase compared to before Bitcode enablement. You must also
+    use Xcode 7 since previous versions of Xcode are not fully compatible
+    with Bitcode enabled libraries.
+
+--
+
 5.1.1 (Wed 8/26/2015)
 
 * Update CocoaPods podspec to use `vendored_libraries`.

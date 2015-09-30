@@ -168,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A2C90541564175A000727BC /* Build configuration list for PBXNativeTarget "ScanExample" */;
 			buildPhases = (
+				A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */,
 				0A2C902F1564175A000727BC /* Sources */,
 				0A2C90301564175A000727BC /* Frameworks */,
 				0A2C90311564175A000727BC /* Resources */,
@@ -220,6 +221,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unzip libCardIO.a.zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A2C902F1564175A000727BC /* Sources */ = {
@@ -295,6 +313,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,6 +346,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -344,7 +364,10 @@
 					"$(inherited)",
 					"$(SRCROOT)/../CardIO",
 				);
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -361,7 +384,10 @@
 					"$(inherited)",
 					"$(SRCROOT)/../CardIO",
 				);
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

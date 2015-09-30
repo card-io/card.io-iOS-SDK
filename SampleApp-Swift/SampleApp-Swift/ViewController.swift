@@ -22,7 +22,7 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
   }
   
   @IBAction func scanCard(sender: AnyObject) {
-    var cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
+    let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
     cardIOVC.modalPresentationStyle = .FormSheet
     presentViewController(cardIOVC, animated: true, completion: nil)
   }
