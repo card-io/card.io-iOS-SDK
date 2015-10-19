@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5DE69211BD5637B006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691F1BD5637B006F2C55 /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
+		A5DE69221BD5637B006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
 		D534F1C71A324F63003C3AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534F1C61A324F63003C3AB4 /* AppDelegate.swift */; };
 		D534F1C91A324F63003C3AB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534F1C81A324F63003C3AB4 /* ViewController.swift */; };
 		D534F1CC1A324F63003C3AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D534F1CA1A324F63003C3AB4 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5DE691F1BD5637B006F2C55 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
 		D534F1C11A324F63003C3AB4 /* SampleApp-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SampleApp-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D534F1C51A324F63003C3AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D534F1C61A324F63003C3AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D534F1FA1A324F97003C3AB4 /* libCardIO.a in Frameworks */,
+				A5DE69211BD5637B006F2C55 /* libopencv_core.a in Frameworks */,
+				A5DE69221BD5637B006F2C55 /* libopencv_imgproc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +144,8 @@
 				D534F1F71A324F97003C3AB4 /* CardIOView.h */,
 				D534F1F81A324F97003C3AB4 /* CardIOViewDelegate.h */,
 				D534F1F91A324F97003C3AB4 /* libCardIO.a */,
+				A5DE691F1BD5637B006F2C55 /* libopencv_core.a */,
+				A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */,
 			);
 			name = CardIO;
 			path = ../CardIO;
@@ -150,7 +158,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D534F1E01A324F64003C3AB4 /* Build configuration list for PBXNativeTarget "SampleApp-Swift" */;
 			buildPhases = (
-				A5DFB2B31BBC985E00AA810C /* Unzip libCardIO.a.zip */,
 				D534F1BD1A324F63003C3AB4 /* Sources */,
 				D534F1BE1A324F63003C3AB4 /* Frameworks */,
 				D534F1BF1A324F63003C3AB4 /* Resources */,
@@ -240,23 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A5DFB2B31BBC985E00AA810C /* Unzip libCardIO.a.zip */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Unzip libCardIO.a.zip";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D534F1BD1A324F63003C3AB4 /* Sources */ = {

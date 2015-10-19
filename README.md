@@ -62,7 +62,7 @@ pod 'CardIO'
 ##### If you don't use CocoaPods, then:
 
 1. Download the latest version of the SDK.
-2. Add the CardIO directory (containing several .h files and libCardIO.a) to your Xcode project. You will need to unzip  `libCardIO.a.zip` to get the `libCardIO.a`.
+2. Add the CardIO directory (containing several .h files, `libCardIO.a`, `libopencv_core.a`, and `libopencv_imgproc.a`) to your Xcode project.
 3. In your project's Build Settings (in the `TARGETS` section, not the `PROJECTS` section), add `-lc++` to `Other Linker Flags`.
 4. *Either:*
   * Add these frameworks to your project.

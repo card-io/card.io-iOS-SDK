@@ -1,6 +1,27 @@
 card.io iOS SDK release notes
 =============================
 
+5.2.1 (Mond 10/19/2015)
+
+* Split CardIO and OpenCV libraries
+    (https://github.com/card-io/card.io-iOS-SDK/issues/147
+     https://github.com/card-io/card.io-iOS-source/issues/41)
+    The library is built with Xcode 7.0 with Bitcode enabled for all 3
+    libraries. The libraries are now split into 3 static libraries:
+    `libCardIO.a`, `libopencv_core.a`, and `libopencv_imgproc.a`.
+    This split was done to reduce the individual file size to make it
+    more managable for GitHub repositories which limit individual files to
+    100 MB.
+
+    Note that when an application is "Bitcode compiled" and distributed
+    by the App Store, the app size should not be signficantly increased
+    compared to before Bitcode enablement.
+
+    You must use Xcode 7 since previous versions of Xcode are not fully
+    compatible with Bitcode enabled libraries.
+
+--
+
 5.2.0 (Wed 9/30/2015)
 
 * Enable Bitcode

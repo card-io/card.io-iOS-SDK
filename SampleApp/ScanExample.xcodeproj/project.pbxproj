@@ -26,6 +26,8 @@
 		2680867016FFB2A00058FD24 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2680866F16FFB2A00058FD24 /* OpenGLES.framework */; };
 		3EB7592518341EE80008860A /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB7592318341EB80008860A /* libCardIO.a */; };
 		3ED76B6417ECF9F50014F059 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED76B6317ECF9F50014F059 /* CoreGraphics.framework */; };
+		A5DE691D1BD562D3006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691B1BD562D3006F2C55 /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
+		A5DE691E1BD562D3006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		3EB7592218341EB80008860A /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		3EB7592318341EB80008860A /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		3ED76B6317ECF9F50014F059 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A5DE691B1BD562D3006F2C55 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB7592518341EE80008860A /* libCardIO.a in Frameworks */,
+				A5DE691D1BD562D3006F2C55 /* libopencv_core.a in Frameworks */,
+				A5DE691E1BD562D3006F2C55 /* libopencv_imgproc.a in Frameworks */,
 				0A96B63D156447AC00DBA017 /* AudioToolbox.framework in Frameworks */,
 				0A96B63B156447A300DBA017 /* AVFoundation.framework in Frameworks */,
 				3ED76B6417ECF9F50014F059 /* CoreGraphics.framework in Frameworks */,
@@ -156,6 +162,8 @@
 				3EB7592118341EB80008860A /* CardIOView.h */,
 				3EB7592218341EB80008860A /* CardIOViewDelegate.h */,
 				3EB7592318341EB80008860A /* libCardIO.a */,
+				A5DE691B1BD562D3006F2C55 /* libopencv_core.a */,
+				A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */,
 			);
 			name = CardIO;
 			path = ../CardIO;
@@ -168,7 +176,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A2C90541564175A000727BC /* Build configuration list for PBXNativeTarget "ScanExample" */;
 			buildPhases = (
-				A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */,
 				0A2C902F1564175A000727BC /* Sources */,
 				0A2C90301564175A000727BC /* Frameworks */,
 				0A2C90311564175A000727BC /* Resources */,
@@ -221,23 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Unzip libCardIO.a.zip";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A2C902F1564175A000727BC /* Sources */ = {
