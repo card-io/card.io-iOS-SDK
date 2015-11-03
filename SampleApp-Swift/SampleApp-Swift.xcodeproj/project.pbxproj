@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5DE69211BD5637B006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691F1BD5637B006F2C55 /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
-		A5DE69221BD5637B006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
+		A5DE69211BD5637B006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691F1BD5637B006F2C55 /* libopencv_core.a */; };
+		A5DE69221BD5637B006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */; };
+		A5E854D81BE929040098801B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E854D71BE929040098801B /* Accelerate.framework */; };
 		D534F1C71A324F63003C3AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534F1C61A324F63003C3AB4 /* AppDelegate.swift */; };
 		D534F1C91A324F63003C3AB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534F1C81A324F63003C3AB4 /* ViewController.swift */; };
 		D534F1CC1A324F63003C3AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D534F1CA1A324F63003C3AB4 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		A5DE691F1BD5637B006F2C55 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
 		A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		A5E854D71BE929040098801B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D534F1C11A324F63003C3AB4 /* SampleApp-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SampleApp-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D534F1C51A324F63003C3AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D534F1C61A324F63003C3AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D534F1FA1A324F97003C3AB4 /* libCardIO.a in Frameworks */,
 				A5DE69211BD5637B006F2C55 /* libopencv_core.a in Frameworks */,
 				A5DE69221BD5637B006F2C55 /* libopencv_imgproc.a in Frameworks */,
+				A5E854D81BE929040098801B /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 				D534F1F91A324F97003C3AB4 /* libCardIO.a */,
 				A5DE691F1BD5637B006F2C55 /* libopencv_core.a */,
 				A5DE69201BD5637B006F2C55 /* libopencv_imgproc.a */,
+				A5E854D71BE929040098801B /* Accelerate.framework */,
 			);
 			name = CardIO;
 			path = ../CardIO;

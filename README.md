@@ -67,6 +67,7 @@ pod 'CardIO'
 4. *Either:*
   * Add these frameworks to your project.
 [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html) is supported.
+     * Accelerate
      * AudioToolbox
      * AVFoundation
      * CoreGraphics
@@ -80,6 +81,7 @@ pod 'CardIO'
      * UIKit
 5. *or:*
   * Add only these frameworks to your project  (as `Optional` [i.e., weak-linked] libraries):
+    * Accelerate
     * AVFoundation
     * AudioToolbox
     * CoreMedia

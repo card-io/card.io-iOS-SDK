@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewControllerDelegate.h
-//  Version 5.2.1
+//  Version 5.2.2
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //

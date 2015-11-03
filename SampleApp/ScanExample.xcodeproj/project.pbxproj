@@ -26,8 +26,9 @@
 		2680867016FFB2A00058FD24 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2680866F16FFB2A00058FD24 /* OpenGLES.framework */; };
 		3EB7592518341EE80008860A /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB7592318341EB80008860A /* libCardIO.a */; };
 		3ED76B6417ECF9F50014F059 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED76B6317ECF9F50014F059 /* CoreGraphics.framework */; };
-		A5DE691D1BD562D3006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691B1BD562D3006F2C55 /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
-		A5DE691E1BD562D3006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
+		A5DE691D1BD562D3006F2C55 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691B1BD562D3006F2C55 /* libopencv_core.a */; };
+		A5DE691E1BD562D3006F2C55 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */; };
+		A5E854D41BE9250B0098801B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E854D31BE9250B0098801B /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		3ED76B6317ECF9F50014F059 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A5DE691B1BD562D3006F2C55 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
 		A5DE691C1BD562D3006F2C55 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		A5E854D31BE9250B0098801B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				3EB7592518341EE80008860A /* libCardIO.a in Frameworks */,
 				A5DE691D1BD562D3006F2C55 /* libopencv_core.a in Frameworks */,
 				A5DE691E1BD562D3006F2C55 /* libopencv_imgproc.a in Frameworks */,
+				A5E854D41BE9250B0098801B /* Accelerate.framework in Frameworks */,
 				0A96B63D156447AC00DBA017 /* AudioToolbox.framework in Frameworks */,
 				0A96B63B156447A300DBA017 /* AVFoundation.framework in Frameworks */,
 				3ED76B6417ECF9F50014F059 /* CoreGraphics.framework in Frameworks */,
@@ -111,6 +114,7 @@
 		0A2C90361564175A000727BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5E854D31BE9250B0098801B /* Accelerate.framework */,
 				0A96B63C156447AC00DBA017 /* AudioToolbox.framework */,
 				0A96B63A156447A300DBA017 /* AVFoundation.framework */,
 				3ED76B6317ECF9F50014F059 /* CoreGraphics.framework */,

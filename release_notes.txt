@@ -1,7 +1,27 @@
 card.io iOS SDK release notes
 =============================
 
-5.2.1 (Mond 10/19/2015)
+5.2.2 (Tue 11/03/2015)
+
+* You will need to link the `Accelerate` framework to your application.
+* Fix issue where an app would hang on card-scanning screen
+    ( https://github.com/card-io/card.io-iOS-SDK/issues/153 )
+    If an app was displaying the card-scanning screen and was sent to the
+    background, when the app was brought back to the foreground, the
+    app would possibly hang on certain hardware, mainly iPhone 5S.
+* Add Carthage support
+    ( https://github.com/card-io/card.io-iOS-source/pull/36
+      https://github.com/card-io/card.io-iOS-source/issues/32 )
+    Initial support for Carthage. In a Cartfile, you can add
+    `github "card-io/card.io-iOS-source"`
+    to get Carthage to build a dynamic framework for inclusion in your
+    projects.
+* Fix warning while running in simulator for 5.2.1
+    ( https://github.com/card-io/card.io-iOS-SDK/issues/154 )
+    Add the x86_64 and i386 slices to the OpenCV libraries to prevent warnings.
+    This was also necesary for clean builds for Carthage.
+
+5.2.1 (Mon 10/19/2015)
 
 * Split CardIO and OpenCV libraries
     (https://github.com/card-io/card.io-iOS-SDK/issues/147
