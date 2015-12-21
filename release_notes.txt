@@ -1,6 +1,14 @@
 card.io iOS SDK release notes
 =============================
 
+5.3.0 (Mon 12/21/2015)
+
+* Add cardholder name for manual text input. Thanks to Mark Rogers and
+  Martin Rybak for the contribution.
+  ( https://github.com/card-io/card.io-iOS-source/pull/45 )
+* Add option for only numeric input for postal code.
+  ( https://github.com/card-io/card.io-iOS-source/pull/51 )
+
 5.2.2 (Tue 11/03/2015)
 
 * You will need to link the `Accelerate` framework to your application.

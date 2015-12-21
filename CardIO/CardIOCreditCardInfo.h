@@ -1,6 +1,6 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 5.2.2
+//  Version 5.3.0
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
@@ -51,6 +51,10 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 /// Postal code. Format is country dependent.
 /// @note May be nil, if postal code information was not requested.
 @property(nonatomic, copy, readwrite) NSString *postalCode;
+
+/// Cardholder Name.
+/// @note May be nil, if cardholder name was not requested.
+@property(nonatomic, copy, readwrite) NSString *cardholderName;
 
 /// Was the card number scanned (as opposed to entered manually)?
 @property(nonatomic, assign, readwrite) BOOL scanned;
