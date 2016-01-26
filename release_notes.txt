@@ -1,6 +1,12 @@
 card.io iOS SDK release notes
 =============================
 
+5.3.1 (Tue 01/26/2016)
+
+* Prevent an issue with crashes when an invalid IplImage is used for
+  scanning causing an exception to be thrown later in cvGetSize().
+  ( https://github.com/card-io/card.io-iOS-source/pull/57 )
+
 5.3.0 (Mon 12/21/2015)
 
 * Add cardholder name for manual text input. Thanks to Mark Rogers and
