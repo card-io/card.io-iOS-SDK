@@ -1,6 +1,11 @@
 card.io iOS SDK release notes
 =============================
 
+5.3.2 (Mon 04/11/2016)
+
+* Fix memory management issues with CMSampleBufferRef causing crash
+  ( https://github.com/card-io/card.io-iOS-SDK/issues/194 )
+
 5.3.1 (Tue 01/26/2016)
 
 * Prevent an issue with crashes when an invalid IplImage is used for
