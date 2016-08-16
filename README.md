@@ -59,6 +59,11 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 pod 'CardIO'
 ```
 
+*Note:* If you want to use `use_frameworks!` in swift you have to add a
+bridge file and import the project from there, visit 
+[#126](https://github.com/card-io/card.io-iOS-SDK/pull/126)
+ for more details
+
 ##### If you don't use CocoaPods, then:
 
 1. Download the latest version of the SDK.
