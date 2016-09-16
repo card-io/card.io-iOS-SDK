@@ -1,6 +1,6 @@
 //
 //  CardIOCreditCardInfo.h
-//  Version 5.4.0
+//  Version 5.4.1
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
@@ -82,3 +82,4 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 + (UIImage *)logoForCardType:(CardIOCreditCardType)cardType;
 
 @end
+

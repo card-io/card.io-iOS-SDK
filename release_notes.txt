@@ -1,6 +1,10 @@
 card.io iOS SDK release notes
 =============================
 
+5.4.1 (Fri 09/16/2016)
+
+* Fix issue with CocoaPods Objective-C projects not building correctly
+
 5.4.0 (Fri 09/16/2016)
 
 * Add methods with card.io specific signatures to avoid name collisions

@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 5.4.0
+//  Version 5.4.1
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
@@ -198,3 +198,4 @@ extern NSString * const CardIOScanningOrientationAnimationDuration;
 @property(nonatomic, retain, readwrite) UIColor *navigationBarTintColorForCardIO;
 
 @end
+
