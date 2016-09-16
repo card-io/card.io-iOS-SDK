@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 5.3.2
+//  Version 5.4.0
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
@@ -42,20 +42,11 @@
 /// ar,da,de,en,en_AU,en_GB,es,es_MX,fr,he,is,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
-/// If YES, the status bar's style will be kept as whatever your app has set it to.
-/// If NO, the status bar style will be set to the default style.
-/// Defaults to NO.
+/// @see keepStatusBarStyleForCardIO
 @property(nonatomic, assign, readwrite) BOOL keepStatusBarStyle;
-
-/// The default appearance of the navigation bar is navigationBarStyle == UIBarStyleDefault;
-/// tintColor == nil (pre-iOS 7), barTintColor == nil (iOS 7).
-/// Set either or both of these properties if you want to override these defaults.
-/// @see navigationBarTintColor
+/// @see navigationBarStyleForCardIO
 @property(nonatomic, assign, readwrite) UIBarStyle navigationBarStyle;
-/// The default appearance of the navigation bar is navigationBarStyle == UIBarStyleDefault;
-/// tintColor == nil (pre-iOS 7), barTintColor == nil (iOS 7).
-/// Set either or both of these properties if you want to override these defaults.
-/// @see navigationBarStyle
+/// @see navigationBarTintColorForCardIO
 @property(nonatomic, retain, readwrite) UIColor *navigationBarTintColor;
 
 /// Normally, card.io blurs the screen when the app is backgrounded,
@@ -183,5 +174,27 @@ extern NSString * const CardIOCurrentScanningOrientation;
 ///
 /// Returned as an NSNumber wrapping an NSTimeInterval (i.e. a double).
 extern NSString * const CardIOScanningOrientationAnimationDuration;
+
+@end
+
+/// Methods with names that do not conflict with Apple's private APIs.
+@interface CardIOPaymentViewController (NonConflictingAPINames)
+
+/// If YES, the status bar's style will be kept as whatever your app has set it to.
+/// If NO, the status bar style will be set to the default style.
+/// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL keepStatusBarStyleForCardIO;
+
+/// The default appearance of the navigation bar is navigationBarStyleForCardIO == UIBarStyleDefault;
+/// tintColor == nil (pre-iOS 7), barTintColor == nil (iOS 7).
+/// Set either or both of these properties if you want to override these defaults.
+/// @see navigationBarTintColorForCardIO
+@property(nonatomic, assign, readwrite) UIBarStyle navigationBarStyleForCardIO;
+
+/// The default appearance of the navigation bar is navigationBarStyleForCardIO == UIBarStyleDefault;
+/// tintColor == nil (pre-iOS 7), barTintColor == nil (iOS 7).
+/// Set either or both of these properties if you want to override these defaults.
+/// @see navigationBarStyleForCardIO
+@property(nonatomic, retain, readwrite) UIColor *navigationBarTintColorForCardIO;
 
 @end
