@@ -51,6 +51,12 @@ The card.io iOS SDK includes header files and a single static library. We'll wal
 *   The latest non-beta version of Xcode. (Older or newer versions *might* also work.)
 *   Supports target deployment of iOS version 6.1+ and instruction set armv7+ (including 64-bit).
 
+### Podfile
+```ruby
+platform :ios, '6.0'
+pod 'CardIO'
+```
+
 ### Setup
 
 ##### If you use [CocoaPods](http://cocoapods.org), then add this line to your podfile:
