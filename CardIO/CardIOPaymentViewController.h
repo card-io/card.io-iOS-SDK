@@ -150,7 +150,7 @@
 /// @note If [CardIOUtilities canReadCardWithCamera] returns false, then if card.io is presented it will
 ///       automatically display its manual entry screen.
 ///       Therefore, if you want to prevent users from *ever* seeing card.io's manual entry screen,
-///       you should first check [CardIOUtilities canReadCardWithCamera] before initing the view controller.
+///       you should first check [CardIOUtilities canReadCardWithCamera] before initiating the view controller.
 @property(nonatomic, assign, readwrite) BOOL disableManualEntryButtons;
 
 /// Access to the delegate.
