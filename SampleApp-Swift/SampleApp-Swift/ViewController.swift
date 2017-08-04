@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+class ViewController: UIViewController {
 
   @IBOutlet weak var resultLabel: UILabel!
   override func viewDidLoad() {
@@ -21,22 +21,26 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func scanCard(sender: AnyObject) {
-    let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
-    cardIOVC.modalPresentationStyle = .FormSheet
-    presentViewController(cardIOVC, animated: true, completion: nil)
-  }
-  
-  func userDidCancelPaymentViewController(paymentViewController: CardIOPaymentViewController!) {
-    resultLabel.text = "user canceled"
-    paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-  func userDidProvideCreditCardInfo(cardInfo: CardIOCreditCardInfo!, inPaymentViewController paymentViewController: CardIOPaymentViewController!) {
-    if let info = cardInfo {
-      let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-      resultLabel.text = str as String
+  @IBAction func scanCard(_ sender: Any) {
+    if let cardIOVC = CardIOPaymentViewController(paymentDelegate: self) {
+        cardIOVC.modalPresentationStyle = .formSheet
+        present(cardIOVC, animated: true, completion: nil)
+    } else {
+        print("Something's not good.")
     }
-    paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
-  }  
+  }
+}
+
+extension ViewController: CardIOPaymentViewControllerDelegate {
+    func userDidCancel(_ paymentViewController: CardIOPaymentViewController) {
+        self.resultLabel.text = "user canceled"
+        paymentViewController.dismiss(animated: true, completion: nil)
+    }
+
+    func userDidProvide(_ cardInfo: CardIOCreditCardInfo, in paymentViewController: CardIOPaymentViewController) {
+        let cardDetails = "Received card info.\n Number: \(cardInfo.redactedCardNumber)\n expiry: \(cardInfo.expiryMonth)/\(cardInfo.expiryYear)\n cvv: \(cardInfo.cvv)."
+        self.resultLabel.text = cardDetails
+
+        paymentViewController.dismiss(animated: true, completion: nil)
+    }
 }
