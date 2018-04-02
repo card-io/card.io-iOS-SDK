@@ -13,6 +13,6 @@ Pod::Spec.new do |spec|
   spec.source_files     = 'CardIO/*.{h,m}'
   spec.frameworks       = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'UIKit'
   spec.libraries        = 'c++'
-  spec.vendored_libraries = 'CardIO/libCardIO.a', 'CardIO/libopencv_core.a', 'CardIO/libopencv_imgproc.a'
+  spec.vendored_libraries = 'CardIO/libCardIOCore.a', 'CardIO/libopencv_core.a', 'CardIO/libopencv_imgproc.a'
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 end
